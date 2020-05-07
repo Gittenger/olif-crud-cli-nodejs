@@ -1,0 +1,50 @@
+{
+  "name": "todocli",
+  "version": "0.0.0",
+  "author": "gittenger @Gittenger",
+  "bin": {
+    "todocli": "./bin/run"
+  },
+  "bugs": "https://github.com/Gittenger/todocli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^2.2.3",
+    "chalk": "^4.0.0",
+    "lowdb": "^1.0.0",
+    "oclif": "^1.15.2"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "globby": "^10.0.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/Gittenger/todocli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "todocli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Gittenger/todocli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
